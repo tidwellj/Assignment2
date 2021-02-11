@@ -36,7 +36,7 @@ public class Player : MonoBehaviour
                 {
 
                 onPlayerDeath(this);
-                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
 
             }
 
