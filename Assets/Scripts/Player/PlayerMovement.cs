@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    // Start is called before the first frame update
     public float acceleration;
     public float maxSpeed;
     private Rigidbody rigidBody;
@@ -18,8 +17,8 @@ public class PlayerMovement : MonoBehaviour
 
     public void Start()
     {
+
         button = GameObject.Find("Button");
-        // button.SetActive(false);
         playerSphere = GameObject.Find("Player");
 
         inputKeys = new KeyCode[] { KeyCode.W, KeyCode.A, KeyCode.S, KeyCode.D };
@@ -68,6 +67,7 @@ public class PlayerMovement : MonoBehaviour
 
         void movePlayer(Vector3 movement)
         {
+
             if (rigidBody.velocity.magnitude * acceleration > maxSpeed)
             {
                 rigidBody.AddForce(movement * -1);
@@ -85,7 +85,6 @@ public class PlayerMovement : MonoBehaviour
         if ((Input.GetKeyDown("space")) && (staTe == 0))
         {
 
-            //button.SetActive(true);
 
             Time.timeScale = 0;
             staTe = 1;
@@ -104,17 +103,14 @@ public class PlayerMovement : MonoBehaviour
 
 
 
-        //if (Input.GetKeyDown("f") && (siZe == 0))
         if (BallSize.size == 1)
         {
-            //playerSphere.gameObject.transform.localScale += newVector3(0, 50, 0);
             transform.localScale = new Vector3(2, 2, 2);
             siZe = 1;
 
         }
 
 
-        //else if ((Input.GetKeyDown("f") && (siZe == 1)))
         else if(BallSize.size == 0)
         {
             transform.localScale = new Vector3(1, 1, 1);

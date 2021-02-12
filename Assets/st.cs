@@ -11,7 +11,7 @@ public class st : MonoBehaviour
         {
 
             GetComponent<Text>().text = "Easy";
-            speeD = 800;
+            speeD = 600;
         }
         /*else if (f == 1)
         {

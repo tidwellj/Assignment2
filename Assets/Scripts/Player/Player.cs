@@ -12,19 +12,9 @@ public class Player : MonoBehaviour
 
     public event Action<Player> onPlayerDeath;
     public int health = 3;
-    // Start is called before the first frame update
-    // Use this for initialization
-    void Start()
-    {
-        SphereMaterial = Resources.Load<Material>("ya");
-        MeshRenderer meshRenderer = GetComponent<MeshRenderer>();
-        // Get the current material applied on the GameObject
-        Material oldMaterial = meshRenderer.material;
-        Debug.Log("Applied Material: " + oldMaterial.name);
-        // Set the new material on the GameObject
-        // get color
-        meshRenderer.material = SphereMaterial;
-    }
+    
+    
+
     void collidedWithEnemy(Enemy enemy)
     {
         enemy.Attack(this);
@@ -56,6 +46,7 @@ public class Player : MonoBehaviour
     }
     private void Update()
     {
+
         MeshRenderer meshRenderer = GetComponent<MeshRenderer>();
         if (DropD.playerColor == "Red")
         {

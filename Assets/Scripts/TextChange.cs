@@ -14,7 +14,7 @@ public class TextChange : MonoBehaviour
             {
 
                 GetComponent<Text>().text = "Fast";
-            Time.timeScale = 3;
+            Time.timeScale = 2;
         }
         else
             {

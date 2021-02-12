@@ -5,12 +5,19 @@ using UnityEngine.SceneManagement;
 
 public class Replay : MonoBehaviour
 {
-    // Start is called before the first frame update
+
+    public void Start()
+    {
+        transform.localScale = new Vector3(1, 1, 1);
+        BallSize.size = 0;
+    }
+
+
     public void restart()
     {
         transform.localScale = new Vector3(1, 1, 1);
 
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex -2);
-
+        Time.timeScale = 1;
     }
 }
